@@ -9,7 +9,7 @@ const App = () => {
   // Paleta Velle Capital + Logo GCF
   const colors = {
     bgVelle: '#fdfbf7',   // Fondo hueso premium
-    navyLogo: '#050a14',  // El azul marino de tu logo
+    navyLogo: '#0b162c',  // El azul marino de tu logo
     goldLogo: '#a18248',  // El dorado de tu logo
     textDark: '#1a1a1a',  // Texto principal
     textMuted: '#555555'  // Texto secundario
@@ -43,11 +43,11 @@ const App = () => {
   return (
     <div style={{ margin: 0, padding: 0, width: '100%', overflowX: 'hidden', fontFamily: "'Inter', sans-serif", backgroundColor: colors.bgVelle }}>
       
-     {/* 1. NAVEGACIÓN - Con Logo de Assets */}
+     {/* 1. NAVEGACIÓN - Integración con Identidad Corporativa */}
 <nav style={{ 
   width: '100%', 
-  borderBottom: '1px solid rgba(0,0,0,0.05)', 
-  backgroundColor: 'rgba(253, 251, 247, 0.9)', // Fondo hueso con ligera transparencia
+  borderBottom: `1px solid ${colors.goldLogo}33`, // Línea dorada sutil al 20% de opacidad
+  backgroundColor: colors.navyLogo, // Azul oscuro del logo
   backdropFilter: 'blur(10px)', 
   position: 'sticky', 
   top: 0, 
@@ -55,24 +55,24 @@ const App = () => {
 }}>
   <div style={{ ...containerStyle, display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '90px' }}>
     
-    {/* LOGO EN LUGAR DE TEXTO */}
+    {/* LOGO - Integrado en el fondo navy */}
     <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
       <img 
         src={logo} 
         alt="GCF Consult Logo" 
         style={{ 
-          height: '65px', // Ajusta esta altura según cómo se vea tu logo
+          height: '65px', 
           width: 'auto',
           display: 'block'
         }} 
       />
     </a>
 
-    {/* MENÚ */}
+    {/* MENÚ - Letras en blanco para contraste sobre Navy */}
     <div style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px' }}>
-      <a href="#servicios" style={{ marginLeft: '2rem', textDecoration: 'none', color: colors.textDark, fontWeight: '600' }}>Servicios</a>
-      <a href="#metodologia" style={{ marginLeft: '2rem', textDecoration: 'none', color: colors.textDark, fontWeight: '600' }}>Metodología</a>
-      <a href="#sobre-nosotros" style={{ marginLeft: '2rem', textDecoration: 'none', color: colors.textDark, fontWeight: '600' }}>Nosotros</a>
+      <a href="#servicios" style={{ marginLeft: '2rem', textDecoration: 'none', color: '#ffffff', fontWeight: '500' }}>Servicios</a>
+      <a href="#metodologia" style={{ marginLeft: '2rem', textDecoration: 'none', color: '#ffffff', fontWeight: '500' }}>Metodología</a>
+      <a href="#sobre-nosotros" style={{ marginLeft: '2rem', textDecoration: 'none', color: '#ffffff', fontWeight: '500' }}>Nosotros</a>
       <a href="#contacto" style={{ 
         marginLeft: '2rem', 
         textDecoration: 'none', 

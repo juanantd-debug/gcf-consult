@@ -1,42 +1,44 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Importación de fuentes elegantes */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --bg-color: #fdfbf7;      /* Fondo estilo Velle */
+  --text-primary: #1a1a1a;  /* Negro carbón */
+  --accent-gold: #c5a059;   /* Dorado del logo */
+  --text-muted: #555555;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
 }
 
-@keyframes logo-spin {
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+}
+
+/* 1. Definimos la animación */
+@keyframes fadeInUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(30px); /* Empieza 30px abajo */
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0); /* Termina en su sitio */
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* 2. Clase para el titular principal */
+.fade-in-hero {
+  animation: fadeInUp 1.5s ease-out forwards;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* 3. Clase para el subtítulo (con retraso para mayor elegancia) */
+.fade-in-subtext {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out 0.6s forwards; /* 0.6s de retraso */
 }

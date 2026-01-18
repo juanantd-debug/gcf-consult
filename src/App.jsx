@@ -255,7 +255,7 @@ const App = () => {
         { step: "01", title: "Diagnóstico", desc: "Análisis profundo de su situación legal y financiera actual." },
         { step: "02", title: "Plan", desc: "Diseño de la estrategia personalizada y hoja de ruta estratégica." },
         { step: "03", title: "Ejecución", desc: "Implementación técnica y jurídica de las soluciones acordadas." },
-        { step: "04", title: "Seguimiento", desc: "Control continuo y adaptación ante cambios de mercado o leyes." }
+        { step: "04", title: "Seguimiento", desc: "Control contínuo y adaptación ante cambios de mercado o legislativos." }
       ].map((item, idx) => (
         <div key={idx} style={{ 
           padding: '15px 0 15px 25px', 

@@ -1,9 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@200;300;400&display=swap');
+/* ============================================
+   FUENTES AUTOALOJADAS — Sin dependencia de Google
+   ============================================ */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./assets/fonts/CormorantGaramond-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./assets/fonts/CormorantGaramond-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ============================================
+   VARIABLES Y ESTILOS BASE
+   ============================================ */
 
 :root {
-  --bg-velle: #fdfbf7;      /* El color hueso/marfil de Velle Capital */
-  --text-dark: #1a1a1a;     /* Negro carbón para contraste */
-  --accent-gold: #c5a059;   /* El dorado de tu logo */
+  --bg-velle: #fdfbf7;
+  --text-dark: #1a1a1a;
+  --accent-gold: #a18248;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -11,10 +53,35 @@ body {
   color: var(--text-dark);
   font-family: 'Inter', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
   text-transform: none;
+}
+
+/* ============================================
+   ANIMACIONES HERO
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-hero {
+  animation: fadeInUp 0.9s ease forwards;
+}
+
+.fade-in-subtext {
+  animation: fadeInUp 0.9s ease 0.3s forwards;
+  opacity: 0;
 }

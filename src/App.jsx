@@ -4,14 +4,14 @@ import videoHero from './assets/edificios.mp4';
 import logo from './assets/content.png';
 import AvisoLegal from './pages/AvisoLegal';
 import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
-import PoliticaCookies from './pages/PoliticaCookies';
-import CookieBanner from './components/CookieBanner';
+import PoliticaCookies from './pages/PoliticaUsoDatos';
+import AvisoConsentimiento from './components/AvisoConsentimiento';
 
 const App = () => {
   const [showAvisoLegal, setShowAvisoLegal] = useState(false);
   const [showPrivacidad, setShowPrivacidad] = useState(false);
   const [showCookies, setShowCookies] = useState(false);
-  const [consentChecked, setConsentChecked] = useState(false);
+  const [form, setForm] = useState({ nombre: '', email: '', mensaje: '' });
 
   const colors = {
     bgVelle: '#fdfbf7',
@@ -59,6 +59,23 @@ const App = () => {
     padding: 0
   };
 
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const formCompleto = form.nombre.trim() && form.email.trim() && form.mensaje.trim();
+
+  const enviarPorCorreo = () => {
+    if (!formCompleto) return;
+    const asunto = encodeURIComponent(`Solicitud de diagnóstico - ${form.nombre}`);
+    const cuerpo = encodeURIComponent(
+      `Nombre: ${form.nombre}\n` +
+      `Email de contacto: ${form.email}\n\n` +
+      `Consulta:\n${form.mensaje}`
+    );
+    window.location.href = `mailto:info@gcfconsult.com?subject=${asunto}&body=${cuerpo}`;
+  };
+
   return (
     <div style={{ margin: 0, padding: 0, width: '100%', overflowX: 'hidden', fontFamily: "'Inter', sans-serif", backgroundColor: colors.bgVelle }}>
 
@@ -68,7 +85,7 @@ const App = () => {
       {showCookies && <PoliticaCookies onClose={() => setShowCookies(false)} />}
 
       {/* BANNER DE COOKIES */}
-      <CookieBanner onShowPolitica={() => setShowCookies(true)} />
+      <AvisoConsentimiento onShowPolitica={() => setShowCookies(true)} />
 
       {/* 1. NAVEGACIÓN */}
       <nav style={{ 
@@ -202,64 +219,64 @@ const App = () => {
             <p style={{ marginTop: '2rem', color: colors.textMuted, fontWeight: '300' }}>Solicite una sesión de diagnóstico inicial.</p>
             <div style={{ marginTop: '50px', fontSize: '0.8rem', letterSpacing: '1px', textTransform: 'uppercase' }}>
               <p style={{ marginBottom: '1rem' }}><strong style={{ color: colors.goldLogo }}>Email:</strong> info@gcfconsult.com</p>
-              <p><strong style={{ color: colors.goldLogo }}>Ubicación:</strong> Madrid | Barcelona</p>
             </div>
           </div>
 
-          <form 
-            action="https://formspree.io/f/xbddddva" 
-            method="POST"
-            style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
-          >
-            <input type="text" name="nombre" placeholder="Nombre completo" required style={inputStyle} />
-            <input type="email" name="email" placeholder="Email corporativo" required style={inputStyle} />
-            <textarea 
-              name="mensaje" 
-              placeholder="¿En qué área estratégica necesita apoyo? (Fiscal, Crecimiento, Patrimonio...)" 
-              rows="4" required style={inputStyle}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Nombre completo"
+              value={form.nombre}
+              onChange={handleChange}
+              style={inputStyle}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email corporativo"
+              value={form.email}
+              onChange={handleChange}
+              style={inputStyle}
+            />
+            <textarea
+              name="mensaje"
+              placeholder="¿En qué área estratégica necesita apoyo? (Fiscal, Crecimiento, Patrimonio...)"
+              rows="4"
+              value={form.mensaje}
+              onChange={handleChange}
+              style={inputStyle}
             ></textarea>
 
-            {/* CONSENTIMIENTO RGPD */}
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginTop: '0.5rem' }}>
-              <input 
-                type="checkbox" 
-                id="consent" 
-                name="consent"
-                required
-                checked={consentChecked}
-                onChange={(e) => setConsentChecked(e.target.checked)}
-                style={{ marginTop: '3px', cursor: 'pointer', accentColor: colors.goldLogo, flexShrink: 0 }}
-              />
-              <label htmlFor="consent" style={{ fontSize: '0.78rem', color: colors.textMuted, fontWeight: '300', lineHeight: '1.6', cursor: 'pointer' }}>
-                He leído y acepto la{' '}
-                <button 
-                  type="button"
-                  onClick={() => setShowPrivacidad(true)}
-                  style={{ color: colors.goldLogo, background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit', textDecoration: 'underline' }}
-                >
-                  Política de Privacidad
-                </button>
-                {' '}y consiento el tratamiento de mis datos personales para atender mi solicitud.
-              </label>
-            </div>
-
-            <button 
-              type="submit" 
-              disabled={!consentChecked}
-              style={{ 
-                padding: '1rem', 
-                backgroundColor: consentChecked ? '#1a1a1a' : '#aaaaaa',
-                color: '#fff', 
-                border: 'none', 
-                cursor: consentChecked ? 'pointer' : 'not-allowed',
+            <button
+              type="button"
+              onClick={enviarPorCorreo}
+              disabled={!formCompleto}
+              style={{
+                padding: '1rem',
+                backgroundColor: formCompleto ? '#1a1a1a' : '#aaaaaa',
+                color: '#fff',
+                border: 'none',
+                cursor: formCompleto ? 'pointer' : 'not-allowed',
                 textTransform: 'uppercase',
                 letterSpacing: '1px',
                 transition: 'background-color 0.2s ease'
               }}
             >
-              Enviar solicitud 
+              Enviar solicitud
             </button>
-          </form>
+
+            <p style={{ fontSize: '0.72rem', color: colors.textMuted, fontWeight: '300', lineHeight: '1.6', marginTop: '0.25rem' }}>
+              Al pulsar "Enviar solicitud" se abrirá su programa de correo con el mensaje preparado para que lo envíe a info@gcfconsult.com. Trataremos sus datos para atender su consulta conforme a nuestra{' '}
+              <button
+                type="button"
+                onClick={() => setShowPrivacidad(true)}
+                style={{ color: colors.goldLogo, background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit', textDecoration: 'underline' }}
+              >
+                Política de Privacidad
+              </button>.
+            </p>
+          </div>
         </div>
       </section>
 

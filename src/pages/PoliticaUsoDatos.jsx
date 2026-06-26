@@ -88,7 +88,7 @@ const PoliticaCookies = ({ onClose }) => {
           <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>5. Actualizaciones de esta política</h2>
           <p>Esta política puede ser actualizada para adaptarse a cambios legislativos o técnicos. Se recomienda revisarla periódicamente.</p>
 
-          <p style={{ marginTop: '3rem', fontSize: '0.8rem', color: '#999' }}>Última actualización: junio de 2025</p>
+          <p style={{ marginTop: '3rem', fontSize: '0.8rem', color: '#999' }}>Última actualización: junio de 2026</p>
         </div>
       </div>
     </div>

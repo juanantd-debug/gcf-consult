@@ -7,7 +7,7 @@ const colors = {
   textMuted: '#555555'
 };
 
-const CookieBanner = ({ onShowPolitica }) => {
+const AvisoConsentimiento = ({ onShowPolitica }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -110,4 +110,4 @@ const CookieBanner = ({ onShowPolitica }) => {
   );
 };
 
-export default CookieBanner;
+export default AvisoConsentimiento;

@@ -8,7 +8,7 @@ const colors = {
   textMuted: '#555555'
 };
 
-const PoliticaPrivacidad = ({ onClose }) => {
+const AvisoLegal = ({ onClose }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = 'unset'; };
@@ -34,53 +34,52 @@ const PoliticaPrivacidad = ({ onClose }) => {
         <h1 style={{
           fontFamily: "'Cormorant Garamond', serif", fontWeight: 400,
           fontSize: '2.5rem', color: colors.textDark, marginBottom: '0.5rem'
-        }}>Política de Privacidad</h1>
+        }}>Aviso Legal</h1>
         <div style={{ borderBottom: `1px solid ${colors.goldLogo}`, marginBottom: '2rem' }}></div>
 
         <div style={{ color: colors.textMuted, lineHeight: '1.8', fontWeight: 300, fontSize: '0.95rem' }}>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>1. Responsable del tratamiento</h2>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>1. Datos identificativos del titular</h2>
+          <p>En cumplimiento del deber de información establecido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se hacen constar los siguientes datos:</p>
           <ul style={{ paddingLeft: '1.5rem' }}>
-            <li><strong>Nombre y apellidos:</strong> Olga Garrido Juárez</li>
-            <li><strong>DNI:</strong> 38078994X </li>
+            <li><strong>Titular:</strong> Olga Garrido Juárez</li>
+            <li><strong>NIF:</strong> 38078994X</li>
             <li><strong>Domicilio profesional:</strong> Avda. Séneca, 24 — 28703 San Sebastián de los Reyes (Madrid)</li>
             <li><strong>Correo electrónico:</strong> info@gcfconsult.com</li>
+            <li><strong>Nombre comercial:</strong> GCF Consult</li>
+            <li><strong>Sitio web:</strong> gcfconsult.com</li>
+            <li><strong>Actividad:</strong> prestación de servicios de asesoramiento jurídico y consultoría de empresa</li>
           </ul>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>2. Datos que recogemos</h2>
-          <p>A través del formulario de contacto del Sitio Web, recogemos los siguientes datos personales. El uso de este formulario está reservado a mayores de 14 años. Al enviar el formulario, el usuario declara expresamente tener dicha edad. Si es menor de 14 años, deberá contar con el consentimiento de sus padres o tutores legales antes de facilitar cualquier dato personal.</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>2. Datos de colegiación</h2>
+          <p>La titular ejerce la abogacía y se encuentra colegiada conforme a los siguientes datos:</p>
           <ul style={{ paddingLeft: '1.5rem' }}>
-            <li>Nombre completo</li>
-            <li>Dirección de correo electrónico</li>
-            <li>Información sobre el área de consulta que el usuario facilita voluntariamente</li>
+            <li><strong>Colegio profesional:</strong> Ilustre Colegio de la Abogacía de Madrid</li>
+            <li><strong>Número de colegiada:</strong> 142325 </li>
+            <li><strong>Título académico:</strong> Licenciada en Derecho (España)</li>
+            <li><strong>Normas profesionales aplicables:</strong> Estatuto General de la Abogacía Española (Real Decreto 135/2021), accesible a través del Consejo General de la Abogacía Española (www.abogacia.es).</li>
           </ul>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>3. Finalidad y base jurídica del tratamiento</h2>
-          <p>Los datos recogidos se tratan con las siguientes finalidades:</p>
-          <ul style={{ paddingLeft: '1.5rem' }}>
-            <li><strong>Gestión de solicitudes de contacto:</strong> atender y responder a las consultas remitidas por el usuario. La base jurídica es la aplicación de medidas precontractuales adoptadas a petición del interesado (art. 6.1.b RGPD).</li>
-            <li><strong>Envío de información comercial:</strong> únicamente si el usuario ha prestado su consentimiento expreso para ello (art. 6.1.a RGPD).</li>
-          </ul>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>3. Objeto</h2>
+          <p>El presente Aviso Legal regula el acceso, la navegación y el uso del sitio web gcfconsult.com (en adelante, el "Sitio Web"). El acceso al Sitio Web atribuye la condición de usuario e implica la aceptación plena de las condiciones recogidas en este Aviso Legal.</p>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>4. Plazo de conservación</h2>
-          <p>Los datos se conservarán durante el tiempo necesario para atender la solicitud y, en su caso, durante el plazo legalmente exigido. Una vez cumplida la finalidad, los datos serán suprimidos o anonimizados.</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>4. Condiciones de acceso y uso</h2>
+          <p>El usuario se compromete a hacer un uso adecuado y lícito del Sitio Web y de sus contenidos, conforme a la legislación vigente, la buena fe y el orden público, absteniéndose de cualquier uso que pueda dañar, inutilizar o sobrecargar el Sitio Web o impedir su normal utilización. La información facilitada a través del Sitio Web tiene carácter general y no constituye asesoramiento jurídico personalizado, que requerirá en todo caso la formalización de la correspondiente relación profesional.</p>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>5. Destinatarios</h2>
-          <p>Los datos no serán cedidos a terceros, salvo obligación legal. El envío de la solicitud se realiza directamente desde el programa de correo del propio usuario, sin intervención de servicios intermediarios. La gestión del correo electrónico del responsable se efectúa a través de un proveedor de servicios de correo que actúa como encargado del tratamiento, con el que se ha suscrito el correspondiente contrato de encargo y cuyos servidores se ubican en la Unión Europea.</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>5. Propiedad intelectual e industrial</h2>
+          <p>Todos los contenidos del Sitio Web (textos, imágenes, diseño gráfico, código fuente, logotipos, marcas y demás elementos) son titularidad de la titular o de terceros que han autorizado su uso, y están protegidos por la normativa de propiedad intelectual e industrial. Queda prohibida su reproducción, distribución, comunicación pública, transformación o cualquier otra forma de explotación sin autorización expresa.</p>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>6. Derechos del interesado</h2>
-          <p>El usuario puede ejercer en cualquier momento los siguientes derechos frente al responsable del tratamiento:</p>
-          <ul style={{ paddingLeft: '1.5rem' }}>
-            <li><strong>Acceso:</strong> conocer qué datos personales se están tratando.</li>
-            <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
-            <li><strong>Supresión:</strong> solicitar la eliminación de sus datos.</li>
-            <li><strong>Oposición y limitación:</strong> oponerse al tratamiento o solicitar su limitación.</li>
-            <li><strong>Portabilidad:</strong> recibir sus datos en formato estructurado.</li>
-          </ul>
-          <p>Para ejercer estos derechos, puede dirigirse a <strong>info@gcfconsult.com</strong>. Si considera que el tratamiento no se ajusta a la normativa, puede presentar una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (www.aepd.es).</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>6. Exclusión de responsabilidad</h2>
+          <p>La titular no se hace responsable de los daños o perjuicios derivados del acceso o uso del Sitio Web, ni de la presencia de virus u otros elementos que puedan producir alteraciones en los sistemas informáticos del usuario. Asimismo, no garantiza la disponibilidad y continuidad permanente del Sitio Web, sin perjuicio de su compromiso de mantenimiento.</p>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>7. Seguridad</h2>
-          <p>El responsable ha adoptado las medidas técnicas y organizativas necesarias para garantizar la seguridad de los datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizado, conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>7. Enlaces</h2>
+          <p>El Sitio Web puede contener enlaces a sitios de terceros. La titular no asume responsabilidad alguna sobre los contenidos, políticas o servicios de dichos sitios, cuyo acceso es responsabilidad exclusiva del usuario.</p>
+
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>8. Protección de datos</h2>
+          <p>El tratamiento de los datos personales facilitados a través del Sitio Web se rige por lo dispuesto en la Política de Privacidad, accesible desde el propio Sitio Web, conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>9. Legislación aplicable y jurisdicción</h2>
+          <p>El presente Aviso Legal se rige por la legislación española. Para la resolución de cualquier controversia, las partes se someten a los juzgados y tribunales que resulten competentes conforme a la normativa aplicable.</p>
 
           <p style={{ marginTop: '3rem', fontSize: '0.8rem', color: '#999' }}>Última actualización: junio de 2026</p>
         </div>
@@ -89,4 +88,4 @@ const PoliticaPrivacidad = ({ onClose }) => {
   );
 };
 
-export default PoliticaPrivacidad;
+export default AvisoLegal;

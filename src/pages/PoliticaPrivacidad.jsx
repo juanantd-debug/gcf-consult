@@ -8,7 +8,7 @@ const colors = {
   textMuted: '#555555'
 };
 
-const PoliticaCookies = ({ onClose }) => {
+const PoliticaPrivacidad = ({ onClose }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = 'unset'; };
@@ -34,50 +34,53 @@ const PoliticaCookies = ({ onClose }) => {
         <h1 style={{
           fontFamily: "'Cormorant Garamond', serif", fontWeight: 400,
           fontSize: '2.5rem', color: colors.textDark, marginBottom: '0.5rem'
-        }}>Política de Cookies</h1>
+        }}>Política de Privacidad</h1>
         <div style={{ borderBottom: `1px solid ${colors.goldLogo}`, marginBottom: '2rem' }}></div>
 
         <div style={{ color: colors.textMuted, lineHeight: '1.8', fontWeight: 300, fontSize: '0.95rem' }}>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>1. ¿Qué son las cookies?</h2>
-          <p>Las cookies son pequeños archivos de texto que se almacenan en el dispositivo del usuario cuando visita un sitio web. Permiten que el sitio recuerde información sobre su visita para facilitar su navegación en visitas posteriores.</p>
-
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>2. Cookies utilizadas en este sitio web</h2>
-          <p>Este sitio web utiliza exclusivamente una cookie técnica propia, necesaria para recordar la preferencia de consentimiento del usuario. No se utilizan cookies de analítica, publicidad ni rastreo de ningún tipo.</p>
-
-          <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem', fontSize: '0.85rem' }}>
-            <thead>
-              <tr style={{ backgroundColor: colors.navyLogo, color: '#fff' }}>
-                <th style={{ padding: '10px 14px', textAlign: 'left', fontWeight: '400', letterSpacing: '1px' }}>Nombre</th>
-                <th style={{ padding: '10px 14px', textAlign: 'left', fontWeight: '400', letterSpacing: '1px' }}>Tipo</th>
-                <th style={{ padding: '10px 14px', textAlign: 'left', fontWeight: '400', letterSpacing: '1px' }}>Finalidad</th>
-                <th style={{ padding: '10px 14px', textAlign: 'left', fontWeight: '400', letterSpacing: '1px' }}>Duración</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid #e0e0e0' }}>
-                <td style={{ padding: '10px 14px' }}>gcf_cookie_consent</td>
-                <td style={{ padding: '10px 14px' }}>Técnica propia</td>
-                <td style={{ padding: '10px 14px' }}>Guarda la preferencia de consentimiento de cookies del usuario</td>
-                <td style={{ padding: '10px 14px' }}>1 año</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>3. Servicios de terceros</h2>
-          <p>Este sitio web no utiliza servicios de terceros que instalen cookies. Las fuentes tipográficas están autoalojadas en el propio servidor y no generan peticiones externas. El formulario de contacto no transmite los datos a ningún servicio intermediario: al enviarlo, se abre el programa de correo del propio usuario para que remita su mensaje directamente al responsable.</p>
-
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>4. Cómo gestionar las cookies</h2>
-          <p>El usuario puede configurar su navegador para aceptar, rechazar o eliminar las cookies en cualquier momento. A continuación se indican los enlaces de gestión de los navegadores más habituales:</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>1. Responsable del tratamiento</h2>
           <ul style={{ paddingLeft: '1.5rem' }}>
-            <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" style={{ color: colors.goldLogo }}>Google Chrome</a></li>
-            <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer" style={{ color: colors.goldLogo }}>Mozilla Firefox</a></li>
-            <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" style={{ color: colors.goldLogo }}>Safari</a></li>
-            <li><a href="https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer" style={{ color: colors.goldLogo }}>Microsoft Edge</a></li>
+            <li><strong>Nombre y apellidos:</strong> Olga Garrido Juárez</li>
+            <li><strong>DNI:</strong> 38078994X </li>
+            <li><strong>Domicilio profesional:</strong> Avda. Séneca, 24 — 28703 San Sebastián de los Reyes (Madrid)</li>
+            <li><strong>Correo electrónico:</strong> info@gcfconsult.com</li>
           </ul>
 
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>5. Actualizaciones de esta política</h2>
-          <p>Esta política puede ser actualizada para adaptarse a cambios legislativos o técnicos. Se recomienda revisarla periódicamente.</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>2. Datos que recogemos</h2>
+          <p>A través del formulario de contacto del Sitio Web, recogemos los siguientes datos personales. El uso de este formulario está reservado a mayores de 14 años. Al enviar el formulario, el usuario declara expresamente tener dicha edad. Si es menor de 14 años, deberá contar con el consentimiento de sus padres o tutores legales antes de facilitar cualquier dato personal.</p>
+          <ul style={{ paddingLeft: '1.5rem' }}>
+            <li>Nombre completo</li>
+            <li>Dirección de correo electrónico</li>
+            <li>Información sobre el área de consulta que el usuario facilita voluntariamente</li>
+          </ul>
+
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>3. Finalidad y base jurídica del tratamiento</h2>
+          <p>Los datos recogidos se tratan con las siguientes finalidades:</p>
+          <ul style={{ paddingLeft: '1.5rem' }}>
+            <li><strong>Gestión de solicitudes de contacto:</strong> atender y responder a las consultas remitidas por el usuario. La base jurídica es la aplicación de medidas precontractuales adoptadas a petición del interesado (art. 6.1.b RGPD).</li>
+            <li><strong>Envío de información comercial:</strong> únicamente si el usuario ha prestado su consentimiento expreso para ello (art. 6.1.a RGPD).</li>
+          </ul>
+
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>4. Plazo de conservación</h2>
+          <p>Los datos se conservarán durante el tiempo necesario para atender la solicitud y, en su caso, durante el plazo legalmente exigido. Una vez cumplida la finalidad, los datos serán suprimidos o anonimizados.</p>
+
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>5. Destinatarios</h2>
+          <p>Los datos no serán cedidos a terceros, salvo obligación legal. El envío de la solicitud se realiza directamente desde el programa de correo del propio usuario, sin intervención de servicios intermediarios. La gestión del correo electrónico del responsable se efectúa a través de un proveedor de servicios de correo que actúa como encargado del tratamiento, con el que se ha suscrito el correspondiente contrato de encargo y cuyos servidores se ubican en la Unión Europea.</p>
+
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>6. Derechos del interesado</h2>
+          <p>El usuario puede ejercer en cualquier momento los siguientes derechos frente al responsable del tratamiento:</p>
+          <ul style={{ paddingLeft: '1.5rem' }}>
+            <li><strong>Acceso:</strong> conocer qué datos personales se están tratando.</li>
+            <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+            <li><strong>Supresión:</strong> solicitar la eliminación de sus datos.</li>
+            <li><strong>Oposición y limitación:</strong> oponerse al tratamiento o solicitar su limitación.</li>
+            <li><strong>Portabilidad:</strong> recibir sus datos en formato estructurado.</li>
+          </ul>
+          <p>Para ejercer estos derechos, puede dirigirse a <strong>info@gcfconsult.com</strong>. Si considera que el tratamiento no se ajusta a la normativa, puede presentar una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (www.aepd.es).</p>
+
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 400, color: colors.textDark, fontSize: '1.4rem', marginTop: '2rem' }}>7. Seguridad</h2>
+          <p>El responsable ha adoptado las medidas técnicas y organizativas necesarias para garantizar la seguridad de los datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizado, conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
 
           <p style={{ marginTop: '3rem', fontSize: '0.8rem', color: '#999' }}>Última actualización: junio de 2026</p>
         </div>
@@ -86,4 +89,4 @@ const PoliticaCookies = ({ onClose }) => {
   );
 };
 
-export default PoliticaCookies;
+export default PoliticaPrivacidad;
